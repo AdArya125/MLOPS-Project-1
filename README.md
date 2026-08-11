@@ -1,20 +1,20 @@
-# 🚗 Vehicle Price Prediction - End-to-End MLOps Project
+# Vehicle Price Prediction - End-to-End MLOps Project
 
 Welcome to the **Vehicle Price Prediction** MLOps project! This repository demonstrates a full-fledged Machine Learning workflow with seamless integration of:
 
-- ⚙️ Automation
-- 📦 Packaging
-- 🧪 Model Training
-- 📊 Data Pipelines
-- ☁️ Cloud Integration
-- 🐳 Dockerization
-- 🔁 CI/CD with GitHub Actions & AWS
+- Automation
+- Packaging
+- Model Training
+- Data Pipelines
+- Cloud Integration
+- Dockerization
+- CI/CD with GitHub Actions & AWS
 
 > **Goal**: Build a production-grade ML pipeline that predicts vehicle prices using modern DevOps principles.
 
 ---
 
-## 🧱 Project Architecture
+## Project Architecture
 
 ```
                         +-------------------+
@@ -44,21 +44,21 @@ Welcome to the **Vehicle Price Prediction** MLOps project! This repository demon
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ Local package creation using `setup.py` and `pyproject.toml`
-- ✅ MongoDB Atlas integration for scalable cloud-based storage
-- ✅ Modular codebase with `src/` architecture and reusable configs
-- ✅ Data ingestion, validation, transformation pipelines
-- ✅ Model training, evaluation, and deployment logic
-- ✅ AWS S3 model storage with versioning
-- ✅ Real-time prediction API served with Flask
-- ✅ CI/CD using Docker, GitHub Actions, ECR, and EC2
-- ✅ Fully automated deployment on port `5080` with custom domain support
+- Local package creation using `setup.py` and `pyproject.toml`
+- MongoDB Atlas integration for scalable cloud-based storage
+- Modular codebase with `src/` architecture and reusable configs
+- Data ingestion, validation, transformation pipelines
+- Model training, evaluation, and deployment logic
+- AWS S3 model storage with versioning
+- Real-time prediction API served with Flask
+- CI/CD using Docker, GitHub Actions, ECR, and EC2
+- Fully automated deployment on port `5080` with custom domain support
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Domain             | Tools / Services Used                     |
 | ------------------ | ----------------------------------------- |
@@ -73,7 +73,7 @@ Welcome to the **Vehicle Price Prediction** MLOps project! This repository demon
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```
 .
@@ -96,9 +96,9 @@ Welcome to the **Vehicle Price Prediction** MLOps project! This repository demon
 
 ---
 
-## 🧪 Setup Guide
+## Setup Guide
 
-### 🔹 Create Project Template & Environment
+### Create Project Template & Environment
 
 ```bash
 python template.py
@@ -107,19 +107,19 @@ conda activate vehicle
 pip install -r requirements.txt
 ```
 
-### 🔹 Setup Local Packages
+### Setup Local Packages
 
 ```bash
 pip list  # Confirm local package installation
 ```
 
-### 🔹 MongoDB Atlas Integration
+### MongoDB Atlas Integration
 
 - Create project and cluster (M0 tier)
 - Create DB user and whitelist `0.0.0.0/0`
 - Copy the Python connection string (replace `<password>`)
 
-### 🔹 Setup Environment Variables
+### Setup Environment Variables
 
 ```bash
 # Mac/Linux
@@ -131,53 +131,53 @@ $env:MONGODB_URL = "mongodb+srv://<user>:<pass>@cluster.mongodb.net/..."
 
 ---
 
-## 📈 ML Pipeline Components
+## ML Pipeline Components
 
-### 📥 Data Ingestion
+### Data Ingestion
 
 - Fetch raw data from MongoDB
 - Convert to pandas DataFrame
 - Store artifacts for next stage
 
-### 🧪 Data Validation
+### Data Validation
 
 - Schema validation via `schema.yaml`
 - Check for missing/null/incorrect data
 
-### 🔄 Data Transformation
+### Data Transformation
 
 - Feature engineering
 - Convert raw features into model-ready format
 
-### 🤖 Model Training
+### Model Training
 
 - Custom training logic using `sklearn`
 - Save best model artifact
 
-### 🧪 Model Evaluation & S3 Upload
+### Model Evaluation & S3 Upload
 
 - Compare old vs. new model
 - Upload latest model to **AWS S3** if performance improves
 
 ---
 
-## ☁️ AWS Cloud Integration
+## AWS Cloud Integration
 
-### ✅ Setup AWS Credentials
+### Setup AWS Credentials
 
 ```bash
 export AWS_ACCESS_KEY_ID="..."
 export AWS_SECRET_ACCESS_KEY="..."
 ```
 
-### ✅ S3 Bucket
+### S3 Bucket
 
 - Region: `us-east-1`
 - Bucket: `my-model-mlopsproj`
 
 ---
 
-## 🐳 CI/CD Pipeline with GitHub Actions & Docker
+## CI/CD Pipeline with GitHub Actions & Docker
 
 1. Configure `aws.yaml` under `.github/workflows`
 2. Build Docker Image → Push to AWS ECR
@@ -186,7 +186,7 @@ export AWS_SECRET_ACCESS_KEY="..."
 
 ---
 
-## 🌐 Access the Application
+## Access the Application
 
 Once deployed:
 
@@ -202,7 +202,7 @@ http://<EC2-PUBLIC-IP>:5000/training
 
 ---
 
-## 🔒 Secrets Used in GitHub Actions
+## Secrets Used in GitHub Actions
 
 | Name                    | Description                    |
 | ----------------------- | ------------------------------ |
@@ -213,29 +213,29 @@ http://<EC2-PUBLIC-IP>:5000/training
 
 ---
 
-## 📌 Future Enhancements
+## Future Enhancements
 
-- ✅ Add model drift detection
-- ✅ Add monitoring with Prometheus/Grafana
-- ✅ Integrate GitHub issues via bot
-- ⏳ Add frontend UI for better UX
-- ⏳ Switch to Terraform for infrastructure provisioning
+- Add model drift detection
+- Add monitoring with Prometheus/Grafana
+- Integrate GitHub issues via bot
+- Add frontend UI for better UX
+- Switch to Terraform for infrastructure provisioning
 
 ---
 
-## 🙌 Contributing
+## Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License.
 
 ---
 
-## 👤 Author
+## Author
 
 **Aditya Arya**  
 _Machine Learning Engineer | MLOps Enthusiast_
